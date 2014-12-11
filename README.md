@@ -3,7 +3,7 @@ WebServiceCalculadora
 
 WebService em PHP com ZendFramework e consumo em Progress 4GL e Android
 
-Obs: Caso o objetivo seja apenas testar o webservice o mesmo está ativo em www.dums.com.br/WSCalculadora/soap-server.php?wsdl
+Obs: Caso o objetivo seja apenas testar o webservice o mesmo está ativo em www.dums.com.br/WSCalculadora/soap-server.php?wsdl, através da URL http://www.dums.com.br/WSCalculadora/soap-client.php poderá ver o resultado do uso das operações soma e subtrai do WS.
 
 Repositório dividido em 3 diretórios:
 * WSCalculadora: WebService, deve ser baixado no servidor, exemplo /var/www/html (manter o diretório WSCalculadora,ficaria como /var/www/html/WSCalculadora), contendo os arquivos:
