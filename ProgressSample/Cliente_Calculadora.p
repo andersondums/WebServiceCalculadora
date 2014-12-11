@@ -1,4 +1,4 @@
-/* caso o webservice n„o conecte pro erro de HTTPSYS, copiar a DLL msvcr71.dll
+/* caso o webservice n√£o conecte pro erro de HTTPSYS, copiar a DLL msvcr71.dll
    para system32 e SysWOW64 */
 
 DEF VAR hWebService AS HANDLE NO-UNDO.
@@ -9,7 +9,7 @@ DEF VAR c-resultado AS LONGCHAR NO-UNDO.
 
 CREATE SERVER hWebService.
 
-hWebService:CONNECT("-WSDL 'http://www.dums.com.br/WSTeste/soap-server.php?wsdl' ") NO-ERROR.
+hWebService:CONNECT("-WSDL 'http://www.dums.com.br/WSCalculadora/soap-server.php?wsdl' ") NO-ERROR.
 
 IF NOT hWebService:CONNECTED() THEN DO:
     DEFINE VARIABLE errmsg AS CHARACTER NO-UNDO INIT "SERVER NOT CONNECTED~n".
@@ -33,10 +33,6 @@ DISP "Soma: " STRING(c-resultado).
 RUN subtrai IN hPort (INPUT "2", INPUT "3", OUTPUT c-resultado).
 
 DISP "Subtrai: " STRING(c-resultado).
-
-RUN multiplica IN hPort(INPUT "2", INPUT "3", OUTPUT c-resultado).
-
-DISP "Multiplica: " STRING(c-resultado).
 
 hWebService:DISCONNECT().
 DELETE OBJECT hWebService.
