@@ -3,7 +3,7 @@
 require_once("autoload-zend.php");
  
 // canal de comunicacao com o webservice, apontar para a URL do WSDL
-$soap = new Zend\Soap\Client("http://127.0.0.1/WSTeste/soap-server.php?wsdl");
+$soap = new Zend\Soap\Client("http://www.dums.com.br/WSCalculadora/soap-server.php?wsdl");
  
 // utilizando as funcoes do webservice
 echo $soap->soma(5, 5) . "<br />"; // 10

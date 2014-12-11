@@ -5,14 +5,14 @@ require_once("autoload-zend.php");
 if (isset($_GET['wsdl'])) {
         // geracao automatica do WSDL
         $autodiscover = new Zend\Soap\AutoDiscover();
-        $autodiscover->setUri('http://ec2-54-94-151-68.sa-east-1.compute.amazonaws.com/WSTeste/soap-server.php');
+        $autodiscover->setUri('http://www.dums.com.br/WSCalculadora/soap-server.php');
  
         // servindo a classe Calculadora
         $autodiscover->setClass('Calculadora');
         $autodiscover->handle();
 } else {
         // instancia do Soao Server
-        $soap = new Zend\Soap\Server("http://ec2-54-94-151-68.sa-east-1.compute.amazonaws.com/WSTeste/soap-server.php?wsdl");
+        $soap = new Zend\Soap\Server("http://www.dums.com.br/WSCalculadora/soap-server.php?wsdl");
  
         // servindo a classe Calculadora
         $soap->setClass('Calculadora');
